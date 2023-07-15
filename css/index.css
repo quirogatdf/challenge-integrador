@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Para los textos es recomendable usar medidas em*/
+html {
+  color: #111111;
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%; /* Se establece el font-size en 10px*/
+}
+
+a {
+  color: inherit;
+  font-family: inherit;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+p {
+  font-size: 1.8em;
+}
+
+header,
+footer {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1200px;
+}
