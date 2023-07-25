@@ -1,5 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap");
 
+:root {
+  /* Palette */
+  --primary-solid: #ff3333;
+  --primary-900: rgba(255, 51, 51, 0.9);
+  --primary-500: rgba(255, 51, 51, 0.5);
+  --primary-300: rgba(255, 51, 51, 0.3);
+
+  --secondary-solid: #1D84bB5;
+  --secondary-900: rgb(29, 132, 181, 0.9);
+  --secondary-500: rgb(29, 132, 181, 0.5);
+  --secondary-300: rgb(29, 132, 181, 0.3);
+
+  --dark-solid: #1f1f1f;
+  --dark-900: rgb(31, 31, 31, 0.9);
+  --dark-500: rgb(31, 31, 31, 0.5);
+  --dark-300: rgb(31, 31, 31, 0.3);
+
+  --dark-bg-solid: #30343f;
+  --light-bg-solid: #fafaff;
+  --light-font-solid: #ffffff;
+
+  /* Typography */
+  --base-font: "Inter", sans-serif;
+  --alternative-font: "Raleway", sans-serif;
+
+  /* Font-sizes */
+  --font-display: 4.6em;
+  --font-jumbo: 3.8em;
+  --font-xlarge: 3em;
+  --font-large: 2.4em;
+  --font-medium: 1.8em;
+  --font-small: 1.6em;
+  --font-xsmall: 1.4em;
+
+  /* Spacings */
+  --spacing-128: 12.8rem;
+  --spacing-68: 6.8rem;
+  --spacing-36: 3.6rem;
+  --spacing-28: 2.8rem;
+  --spacing-24: 2.4rem;
+  --spacing-20: 2rem;
+  --spacing-16: 1.6rem;
+  --spacing-12: 1.2rem;
+  --spacing-8: 0.8rem;
+}
+
 *,
 *::before,
 *::after {
@@ -10,15 +56,14 @@
 
 /* Para los textos es recomendable usar medidas em*/
 html {
-  color: #111111;
-  font-family: "Inter", sans-serif;
+  color: var(--dark-solid);
+  font-family: var(--base-font);
   font-size: 62.5%; /* Se establece el font-size en 10px*/
 }
 
 a {
   color: inherit;
   font-family: inherit;
-  font-size: 2em;
   text-decoration: none;
 }
 
@@ -31,13 +76,99 @@ p {
   font-size: 1.8em;
 }
 
+img {
+  width: 100%;
+}
 header,
 footer {
-  color: #ffffff;
-  font-family: "Raleway", sans-serif;
+  color: var(--light-font-solid);
+  font-family: var(--alternative-font);
 }
-
-.container{
+/* Helpers */
+.container {
   margin: 0 auto;
   max-width: 1200px;
+}
+
+
+
+/*  Header  */
+header {
+  background-color: var(--dark-bg-solid);
+  padding: var(--spacing-36);
+}
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* padding: var(--spacing-20, 0px); */
+}
+
+.navbar__logo {
+  max-width: 300px;
+}
+
+.navbar__menu {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-20);
+}
+
+.navbar__link {
+  display: inline-block;
+  font-size: var(--font-medium);
+  padding: var(--spacing-8) var(--spacing-16);
+  position: relative;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar__link:hover {
+  background-color: var(--primary-900);
+}
+footer {
+  background-color: var(--dark-bg-solid);
+  text-align: center;
+}
+
+footer section nav {
+  padding: var(--spacing-36) 0%;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer section nav ul {
+  gap: var(--spacing-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.with-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+
+}
+.with-submenu:hover .submenu{
+  display: block;
+
+}
+
+.submenu {
+  background-color: var(--dark-bg-solid);
+  display: none;
+  position: absolute;
+  width: 300px;
+
+}
+
+.submenu__link{
+  display: block;
+  padding: var(--spacing-8) var(--spacing-16);
+  font-size: var(--font-medium);
+  transition: background 0.3s ease-in-out;
+}
+.submenu__link:hover{
+  background-color: var(--primary-900);
 }
